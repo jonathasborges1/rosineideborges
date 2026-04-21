@@ -104,14 +104,14 @@ export default function Navbar() {
         </ul>
 
         <div className="hidden md:block">
-          <Button
-            as="a"
+          <a
             href={WA_LINK}
             target="_blank"
             rel="noopener noreferrer"
+            className="inline-flex min-h-9 items-center justify-center rounded-pill border border-accent bg-accent px-5 py-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] leading-none text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-espresso hover:shadow-md"
           >
             Agendar Consulta
-          </Button>
+          </a>
         </div>
 
         <button

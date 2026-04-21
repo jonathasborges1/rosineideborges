@@ -7,11 +7,11 @@ export default function Hero() {
   return (
     <section
       id="hero"
-      className="relative overflow-hidden bg-cream min-h-[calc(100svh-3.25rem)] md:min-h-screen flex items-start md:items-center pt-[3.25rem] md:pt-16"
+      className="relative overflow-hidden bg-cream min-h-[calc(100svh-3.25rem)] md:min-h-screen flex items-start md:items-center pt-[3.25rem] md:pt-10"
     >
       <div className="absolute inset-x-0 top-0 h-24 md:h-40 bg-gradient-to-b from-white/55 to-transparent pointer-events-none" />
 
-      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:py-24 lg:py-28 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(320px,0.86fr)] gap-7 md:gap-12 lg:gap-16 items-center">
+      <div className="w-full max-w-6xl mx-auto px-4 sm:px-6 md:px-8 py-6 sm:py-8 md:pt-14 md:pb-20 lg:pt-16 lg:pb-24 grid grid-cols-1 md:grid-cols-[minmax(0,1fr)_minmax(320px,0.86fr)] gap-7 md:gap-12 lg:gap-16 items-center">
         <div className="relative flex items-center justify-center order-2 md:order-2">
           <div className="relative w-full aspect-[1.08/1] max-h-64 rounded-xl overflow-hidden border border-sand shadow-card-lg md:hidden">
             <Image
@@ -51,13 +51,13 @@ export default function Hero() {
                 fetchPriority="high"
                 sizes="(max-width: 1023px) 42vw, 520px"
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-ink/25 via-transparent to-transparent" />
+              <div className="absolute inset-0 bg-gradient-to-t from-ink/10 via-transparent to-transparent" />
             </div>
-            <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-white/60 bg-white/88 px-5 py-4 shadow-card backdrop-blur">
-              <p className="font-serif text-lg font-semibold text-ink">
+            <div className="absolute bottom-5 left-5 right-5 rounded-lg border border-sand/70 bg-white/95 px-5 py-3 shadow-card backdrop-blur-sm">
+              <p className="font-serif text-base font-semibold text-ink">
                 Rosineide B. Cavalcante
               </p>
-              <p className="font-sans text-xs tracking-widest uppercase text-muted">
+              <p className="mt-1 font-sans text-[0.68rem] tracking-widest uppercase text-muted">
                 Psicologa - CRP20/02777
               </p>
             </div>
@@ -95,7 +95,12 @@ export default function Hero() {
           </div>
 
           <div className="grid grid-cols-1 sm:flex sm:flex-row gap-3 md:gap-4 mt-1">
-            <Button as="a" href={WA_AGENDAR} target="_blank" rel="noopener noreferrer">
+            <Button
+              as="a"
+              href={WA_AGENDAR}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
               Agendar pelo WhatsApp
             </Button>
             <Button as="a" href="#sobre" variant="ghost">

@@ -73,7 +73,7 @@ export default function LoadingScreen() {
       isVisible = true;
       setShow(true);
       document.body.style.overflow = "hidden";
-    }, 200);
+    }, 600);
 
     const scheduleDismiss = () => {
       if (hasDismissStarted) return;

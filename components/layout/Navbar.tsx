@@ -70,7 +70,7 @@ export default function Navbar() {
       }`}
     >
       <nav
-        className={`max-w-6xl mx-auto px-6 py-8 sm:px-6 md:px-8 flex items-center justify-between gap-3 transition-all duration-300 ${
+        className={`max-w-6xl mx-auto px-4 sm:px-6 md:px-8 flex items-center justify-between gap-3 transition-all duration-300 ${
           scrolled ? "h-[3.25rem] md:h-14" : "h-[3.25rem] md:h-16"
         }`}
       >
@@ -80,7 +80,7 @@ export default function Navbar() {
           onClick={() => setOpen(false)}
         >
           <span className="block truncate">Rosineide B. Cavalcante</span>
-          <span className="block truncate pt-2 text-[0.56rem] sm:text-[0.62rem] md:text-xs font-sans font-normal text-muted tracking-widest uppercase leading-none">
+          <span className="block truncate pt-1 text-[0.56rem] sm:text-[0.62rem] md:text-xs font-sans font-normal text-muted tracking-widest uppercase leading-none">
             Psicologa - CRP20/02777
           </span>
         </a>

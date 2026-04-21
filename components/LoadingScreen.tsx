@@ -1,13 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-
-const LOADING_STEPS = [
-  "Preparando a pagina",
-  "Carregando imagens",
-  "Ajustando fontes",
-  "Quase pronto",
-];
+import { LOADING_STEPS } from "@/lib/constants";
 
 function waitForWindowLoad() {
   if (document.readyState === "complete") {

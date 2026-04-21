@@ -1,9 +1,7 @@
 import { Brain } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-
-const WA_LINK =
-  "https://wa.me/5592988443673?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta.";
+import { WA_AGENDAR } from "@/lib/constants";
 
 export default function CTAFinal() {
   return (
@@ -39,7 +37,7 @@ export default function CTAFinal() {
 
         <Button
           as="a"
-          href={WA_LINK}
+          href={WA_AGENDAR}
           target="_blank"
           rel="noopener noreferrer"
           className="text-sm sm:text-base px-8 sm:px-10 py-4"

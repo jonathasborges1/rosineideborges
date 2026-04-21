@@ -2,9 +2,7 @@ import Image from "next/image";
 import { HeartHandshake, ShieldCheck, Globe, ChevronDown } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Counter from "@/components/ui/Counter";
-
-const WA_LINK =
-  "https://wa.me/5592988443673?text=Ola%2C%20gostaria%20de%20agendar%20uma%20consulta.";
+import { WA_AGENDAR } from "@/lib/constants";
 
 export default function Hero() {
   return (
@@ -129,7 +127,7 @@ export default function Hero() {
             className="hero-enter grid grid-cols-1 sm:flex sm:flex-row gap-3 md:gap-4 mt-1"
             style={{ animationDelay: "390ms" }}
           >
-            <Button as="a" href={WA_LINK} target="_blank" rel="noopener noreferrer">
+            <Button as="a" href={WA_AGENDAR} target="_blank" rel="noopener noreferrer">
               Agendar pelo WhatsApp
             </Button>
             <Button as="a" href="#sobre" variant="ghost">

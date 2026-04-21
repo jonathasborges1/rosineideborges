@@ -4,6 +4,7 @@ import type { Metadata } from "next";
 import { Playfair_Display, Raleway } from "next/font/google";
 import LoadingScreen from "@/components/LoadingScreen";
 import ScrollProgress from "@/components/ui/ScrollProgress";
+import { siteUrl } from "@/lib/constants";
 
 const playfair = Playfair_Display({
   subsets: ["latin"],
@@ -18,8 +19,6 @@ const raleway = Raleway({
   display: "swap",
   weight: ["300", "400", "500", "600"],
 });
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rosineideborges.com.br";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),

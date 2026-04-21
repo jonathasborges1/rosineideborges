@@ -1,38 +1,8 @@
-import { Heart, Monitor, MapPin, Users, Ribbon } from "lucide-react";
 import Card from "@/components/ui/Card";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-
-const WA_LINK =
-  "https://wa.me/5592988443673?text=Ola%2C%20gostaria%20de%20saber%20mais%20sobre%20os%20servicos.";
-
-const servicos = [
-  {
-    icon: Heart,
-    titulo: "Psicoterapia Individual",
-    desc: "Espaço terapêutico focado em autoconhecimento, manejo de emoções, ansiedade, depressão, luto e crescimento pessoal.",
-  },
-  {
-    icon: Monitor,
-    titulo: "Atendimento Online",
-    desc: "Sessões de terapia por videochamada para qualquer cidade do Brasil. Mesma qualidade, no conforto da sua casa.",
-  },
-  {
-    icon: MapPin,
-    titulo: "Atendimento Presencial",
-    desc: "Consultório localizado na Praça 14 de Janeiro, Manaus/AM. Um ambiente acolhedor e reservado para o seu cuidado.",
-  },
-  {
-    icon: Users,
-    titulo: "Atenção ao Idoso",
-    desc: "Especializada em Gerontologia, oferece cuidado psicológico dedicado à terceira idade e às famílias.",
-  },
-  {
-    icon: Ribbon,
-    titulo: "Suporte Oncológico",
-    desc: "Psico-oncologia para pacientes em tratamento e familiares, com acolhimento, força e qualidade de vida.",
-  },
-];
+import { WA_SERVICOS } from "@/lib/constants";
+import { servicos } from "@/lib/data/servicos";
 
 export default function Servicos() {
   return (
@@ -92,7 +62,7 @@ export default function Servicos() {
             </p>
             <Button
               as="a"
-              href={WA_LINK}
+              href={WA_SERVICOS}
               target="_blank"
               rel="noopener noreferrer"
               variant="outline"

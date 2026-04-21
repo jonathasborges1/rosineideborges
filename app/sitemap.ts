@@ -1,12 +1,11 @@
 import type { MetadataRoute } from "next";
-
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://rosineideborges.com.br";
+import { siteUrl } from "@/lib/constants";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   return [
     {
       url: siteUrl,
-      lastModified: new Date(),
+      lastModified: new Date("2025-04-21"),
       changeFrequency: "monthly",
       priority: 1,
     },

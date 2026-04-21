@@ -1,28 +1,8 @@
 import Image from "next/image";
-import { Brain, Ribbon, Users2, type LucideIcon } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-
-const WA_LINK =
-  "https://wa.me/5592988443673?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta.";
-
-const especialidades: { titulo: string; desc: string; icon: LucideIcon }[] = [
-  {
-    icon: Users2,
-    titulo: "Gerontologia",
-    desc: "Pós-graduada em Gerontologia — cuidado especializado para a terceira idade.",
-  },
-  {
-    icon: Ribbon,
-    titulo: "Psico-oncologia",
-    desc: "Pós-graduada em Psico-oncologia — suporte emocional para pacientes e familiares.",
-  },
-  {
-    icon: Brain,
-    titulo: "Psicoterapia",
-    desc: "Abordagem humanizada para ansiedade, depressão, luto e desenvolvimento pessoal.",
-  },
-];
+import { WA_AGENDAR } from "@/lib/constants";
+import { especialidades } from "@/lib/data/especialidades";
 
 export default function Sobre() {
   return (
@@ -123,7 +103,7 @@ export default function Sobre() {
           <div className="mt-1 w-full sm:w-auto">
             <Button
               as="a"
-              href={WA_LINK}
+              href={WA_AGENDAR}
               target="_blank"
               rel="noopener noreferrer"
             >

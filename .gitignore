@@ -3,6 +3,7 @@ node_modules/
 
 # Next.js build output
 .next/
+.next-dev/
 out/
 
 # production
@@ -36,3 +37,4 @@ Thumbs.db
 next-env.d.ts
 base
 .claude
+.next-dev

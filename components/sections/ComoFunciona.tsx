@@ -1,30 +1,7 @@
-import { MessageCircle, CalendarCheck, Sparkles, type LucideIcon } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-
-const WA_LINK =
-  "https://wa.me/5592988443673?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta.";
-
-const passos: { numero: string; icon: LucideIcon; titulo: string; desc: string }[] = [
-  {
-    numero: "01",
-    icon: MessageCircle,
-    titulo: "Entre em contato",
-    desc: "Mande uma mensagem pelo WhatsApp. Não precisa ter certeza sobre nada — só dar o primeiro passo já é suficiente.",
-  },
-  {
-    numero: "02",
-    icon: CalendarCheck,
-    titulo: "Agendamos sua sessão",
-    desc: "Escolhemos juntos o melhor dia e horário para você, de forma online ou presencial em Manaus.",
-  },
-  {
-    numero: "03",
-    icon: Sparkles,
-    titulo: "Inicie sua jornada",
-    desc: "Na primeira sessão, você fala, eu escuto. Sem pressão. É o começo de um cuidado que respeita o seu ritmo.",
-  },
-];
+import { WA_AGENDAR } from "@/lib/constants";
+import { passos } from "@/lib/data/passos";
 
 export default function ComoFunciona() {
   return (
@@ -97,7 +74,7 @@ export default function ComoFunciona() {
         <div className="flex justify-center">
           <Button
             as="a"
-            href={WA_LINK}
+            href={WA_AGENDAR}
             target="_blank"
             rel="noopener noreferrer"
             className="bg-accent hover:bg-sand hover:text-ink border-accent"

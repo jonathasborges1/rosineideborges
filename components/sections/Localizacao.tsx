@@ -1,8 +1,17 @@
+"use client";
+
+import { useState } from "react";
+import dynamic from "next/dynamic";
+import Image from "next/image";
 import { MapPin, Clock, Phone } from "lucide-react";
 import LazyMap from "@/components/LazyMap";
 import Reveal from "@/components/ui/Reveal";
 
+const Lightbox = dynamic(() => import("@/components/ui/Lightbox"), { ssr: false });
+
 export default function Localizacao() {
+  const [lightboxOpen, setLightboxOpen] = useState(false);
+
   return (
     <section
       id="localizacao"
@@ -27,7 +36,21 @@ export default function Localizacao() {
         </Reveal>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-6 md:gap-7 lg:gap-8 items-start">
-          <Reveal variant="fade-right" delay={80}>
+          <Reveal variant="fade-right" delay={80} className="flex flex-col gap-4">
+            <button
+              onClick={() => setLightboxOpen(true)}
+              className="relative w-full aspect-video rounded-2xl overflow-hidden border border-sand shadow-card-md group cursor-zoom-in"
+              aria-label="Ampliar foto do consultório"
+            >
+              <Image
+                src="/oncologica-local-atendimento.jpeg"
+                alt="Consultório — Oncológica, Av. Álvaro Maia, Manaus"
+                fill
+                className="object-cover transition-transform duration-500 group-hover:scale-105"
+                sizes="(max-width: 768px) 100vw, 45vw"
+              />
+              <span className="absolute inset-0 bg-black/0 group-hover:bg-black/15 transition-colors duration-300" />
+            </button>
             <LazyMap />
           </Reveal>
 
@@ -100,6 +123,14 @@ export default function Localizacao() {
           </div>
         </div>
       </div>
+
+      {lightboxOpen && (
+        <Lightbox
+          src="/oncologica-local-atendimento.jpeg"
+          alt="Consultório — Oncológica, Av. Álvaro Maia, Manaus"
+          onClose={() => setLightboxOpen(false)}
+        />
+      )}
     </section>
   );
 }

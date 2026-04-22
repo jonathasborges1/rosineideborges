@@ -12,26 +12,22 @@ function getLocalIP() {
       }
     }
   }
-  return '0.0.0.0'
+  return null
 }
+
+// Limpa o cache do webpack a cada início para evitar erros de módulo stale
+try {
+  fs.rmSync(path.resolve(process.cwd(), '.next/cache/webpack'), { recursive: true, force: true })
+} catch {}
 
 const ip = getLocalIP()
-const devDistDir = '.next-dev'
-
-try {
-  fs.mkdirSync(path.resolve(process.cwd(), devDistDir), { recursive: true })
-  fs.rmSync(path.resolve(process.cwd(), devDistDir, 'trace'), { force: true })
-} catch (error) {
-  // Falha ao limpar trace não deve impedir o dev server de iniciar.
+if (ip) {
+  console.log(`  - Network:      http://${ip}:3000`)
 }
 
-const child = spawn('npx', ['next', 'dev', '-H', ip], {
+const child = spawn('npx', ['next', 'dev', '-H', '0.0.0.0'], {
   stdio: 'inherit',
   shell: true,
-  env: {
-    ...process.env,
-    NEXT_DIST_DIR: devDistDir,
-  },
 })
 
 child.on('exit', (code) => process.exit(code ?? 0))

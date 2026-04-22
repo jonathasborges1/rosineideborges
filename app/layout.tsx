@@ -2,6 +2,7 @@ import "./globals.css";
 
 import type { Metadata } from "next";
 import { Playfair_Display, Raleway } from "next/font/google";
+import Script from "next/script";
 import LoadingScreen from "@/components/LoadingScreen";
 import ScrollProgress from "@/components/ui/ScrollProgress";
 import { siteUrl } from "@/lib/constants";
@@ -82,6 +83,18 @@ export default function RootLayout({
         <meta name="theme-color" content="#F5EFE6" />
       </head>
       <body>
+        <Script
+          src="https://www.googletagmanager.com/gtag/js?id=G-KGTZFFKJV5"
+          strategy="afterInteractive"
+        />
+        <Script id="google-analytics" strategy="afterInteractive">
+          {`
+            window.dataLayer = window.dataLayer || [];
+            function gtag(){dataLayer.push(arguments);}
+            gtag('js', new Date());
+            gtag('config', 'G-KGTZFFKJV5');
+          `}
+        </Script>
         <ScrollProgress />
         <LoadingScreen />
         {children}

@@ -1,6 +1,5 @@
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import { WA_AGENDAR } from "@/lib/constants";
 import { passos } from "@/lib/data/passos";
 
 export default function ComoFunciona() {
@@ -74,9 +73,7 @@ export default function ComoFunciona() {
         <div className="flex justify-center">
           <Button
             as="a"
-            href={WA_AGENDAR}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/obrigado"
             className="bg-accent hover:bg-sand hover:text-ink border-accent"
           >
             Quero começar agora

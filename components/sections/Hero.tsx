@@ -1,7 +1,6 @@
 import Image from "next/image";
 import { ChevronDown, Globe, HeartHandshake, ShieldCheck } from "lucide-react";
 import Button from "@/components/ui/Button";
-import { WA_AGENDAR } from "@/lib/constants";
 
 export default function Hero() {
   return (
@@ -95,12 +94,7 @@ export default function Hero() {
           </div>
 
           <div className="grid grid-cols-1 sm:flex sm:flex-row gap-3 md:gap-4 mt-1">
-            <Button
-              as="a"
-              href={WA_AGENDAR}
-              target="_blank"
-              rel="noopener noreferrer"
-            >
+            <Button as="a" href="/obrigado">
               Agendar pelo WhatsApp
             </Button>
             <Button as="a" href="#sobre" variant="ghost">

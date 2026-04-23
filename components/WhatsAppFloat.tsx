@@ -1,5 +1,3 @@
-const WA_LINK =
-  "https://wa.me/5592988443673?text=Olá%2C%20gostaria%20de%20agendar%20uma%20consulta.";
 
 export default function WhatsAppFloat() {
   return (
@@ -12,9 +10,7 @@ export default function WhatsAppFloat() {
         className="animate-pulse-ring absolute inset-0 rounded-full bg-[#25D366] motion-reduce:hidden"
       />
     <a
-      href={WA_LINK}
-      target="_blank"
-      rel="noopener noreferrer"
+      href="/obrigado"
       aria-label="Agendar consulta pelo WhatsApp"
       className="relative flex items-center justify-center w-14 h-14 rounded-full bg-[#25D366] text-white shadow-card-lg hover:scale-110 active:scale-95 transition-transform duration-300 motion-reduce:transition-none"
     >

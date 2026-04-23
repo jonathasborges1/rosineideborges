@@ -11,8 +11,6 @@ const links = [
   { label: "Localizacao", href: "#localizacao" },
 ];
 
-const WA_LINK =
-  "https://wa.me/5592988443673?text=Ola%2C%20gostaria%20de%20agendar%20uma%20consulta.";
 
 export default function Navbar() {
   const [open, setOpen] = useState(false);
@@ -105,9 +103,7 @@ export default function Navbar() {
 
         <div className="hidden md:block">
           <a
-            href={WA_LINK}
-            target="_blank"
-            rel="noopener noreferrer"
+            href="/obrigado"
             className="inline-flex min-h-9 items-center justify-center rounded-pill border border-accent bg-accent px-5 py-2 font-sans text-[0.72rem] font-semibold uppercase tracking-[0.16em] leading-none text-white shadow-sm transition-all duration-300 hover:-translate-y-0.5 hover:bg-espresso hover:shadow-md"
           >
             Agendar Consulta
@@ -151,9 +147,7 @@ export default function Navbar() {
         ))}
         <Button
           as="a"
-          href={WA_LINK}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/obrigado"
           className="mt-2 justify-center"
         >
           Agendar Consulta

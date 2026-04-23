@@ -1,7 +1,6 @@
 import Image from "next/image";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import { WA_AGENDAR } from "@/lib/constants";
 import { especialidades } from "@/lib/data/especialidades";
 
 export default function Sobre() {
@@ -103,9 +102,7 @@ export default function Sobre() {
           <div className="mt-1 w-full sm:w-auto">
             <Button
               as="a"
-              href={WA_AGENDAR}
-              target="_blank"
-              rel="noopener noreferrer"
+              href="/obrigado"
             >
               Agendar minha consulta
             </Button>

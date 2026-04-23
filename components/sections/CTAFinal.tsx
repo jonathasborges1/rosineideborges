@@ -1,7 +1,6 @@
 import { Brain } from "lucide-react";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import { WA_AGENDAR } from "@/lib/constants";
 
 export default function CTAFinal() {
   return (
@@ -37,9 +36,7 @@ export default function CTAFinal() {
 
         <Button
           as="a"
-          href={WA_AGENDAR}
-          target="_blank"
-          rel="noopener noreferrer"
+          href="/obrigado"
           className="text-sm sm:text-base px-8 sm:px-10 py-4"
         >
           Agendar minha primeira sessão

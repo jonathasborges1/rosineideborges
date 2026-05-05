@@ -1,6 +1,8 @@
 import type { Metadata } from "next";
+import { siteUrl } from "@/lib/constants";
 
 export const metadata: Metadata = {
+  alternates: { canonical: `${siteUrl}/obrigado` },
   robots: { index: false, follow: false },
 };
 

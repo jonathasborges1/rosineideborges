@@ -34,7 +34,7 @@ export const metadata: Metadata = {
   authors: [{ name: "Rosineide B. Cavalcante" }],
   creator: "Rosineide B. Cavalcante",
   alternates: {
-    canonical: "/",
+    canonical: siteUrl,
   },
   openGraph: {
     title: "Psicóloga em Manaus | Rosineide B. Cavalcante",

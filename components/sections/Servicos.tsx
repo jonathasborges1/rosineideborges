@@ -41,7 +41,6 @@ export default function Servicos() {
               }
             >
               <Card
-                as={servico.href ? "a" : "div"}
                 href={servico.href}
                 className="group flex flex-col gap-4 h-full"
               >

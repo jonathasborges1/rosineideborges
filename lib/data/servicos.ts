@@ -11,6 +11,7 @@ export interface Servico {
   icon: LucideIcon;
   titulo: string;
   desc: string;
+  href?: string;
 }
 
 export const servicos: Servico[] = [
@@ -23,6 +24,7 @@ export const servicos: Servico[] = [
     icon: Monitor,
     titulo: "Atendimento Online",
     desc: "Sessões de terapia por videochamada para qualquer cidade do Brasil. Mesma qualidade, no conforto da sua casa.",
+    href: "/terapia-online-manaus",
   },
   {
     icon: MapPin,
@@ -33,6 +35,7 @@ export const servicos: Servico[] = [
     icon: Users,
     titulo: "Atenção ao Idoso",
     desc: "Especializada em Gerontologia, oferece cuidado psicológico dedicado à terceira idade e às famílias.",
+    href: "/psicoterapia-para-idosos-manaus",
   },
   {
     icon: Ribbon,

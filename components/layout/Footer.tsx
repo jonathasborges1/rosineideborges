@@ -58,9 +58,23 @@ export default function Footer() {
           </p>
           <ul className="space-y-2 font-sans text-sm">
             <li>Psicoterapia Individual</li>
-            <li>Atenção ao Idoso (Gerontologia)</li>
+            <li>
+              <a
+                href="/psicoterapia-para-idosos-manaus"
+                className="hover:text-accent transition-colors underline-offset-2 hover:underline"
+              >
+                Atenção ao Idoso (Gerontologia)
+              </a>
+            </li>
             <li>Suporte Oncológico</li>
-            <li>Atendimento Online — Todo o Brasil</li>
+            <li>
+              <a
+                href="/terapia-online-manaus"
+                className="hover:text-accent transition-colors underline-offset-2 hover:underline"
+              >
+                Atendimento Online — Todo o Brasil
+              </a>
+            </li>
             <li>Atendimento Presencial — Manaus/AM</li>
           </ul>
         </Reveal>

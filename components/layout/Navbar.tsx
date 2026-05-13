@@ -1,6 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { usePathname } from "next/navigation";
 import { Menu, X } from "lucide-react";
 import Button from "@/components/ui/Button";
 
@@ -13,6 +14,8 @@ const links = [
 
 
 export default function Navbar() {
+  const pathname = usePathname();
+  const isHome = pathname === "/";
   const [open, setOpen] = useState(false);
   const [scrolled, setScrolled] = useState(false);
   const [activeLink, setActiveLink] = useState("#hero");
@@ -84,21 +87,25 @@ export default function Navbar() {
         </a>
 
         <ul className="hidden md:flex items-center gap-8" role="list">
-          {links.map((link) => (
-            <li key={link.href}>
-              <a
-                href={link.href}
-                aria-current={activeLink === link.href ? "page" : undefined}
-                className={`relative font-sans text-sm py-1 transition-colors duration-200 after:absolute after:left-0 after:-bottom-0.5 after:h-px after:bg-accent after:transition-all after:duration-300 ${
-                  activeLink === link.href
-                    ? "text-accent after:w-full"
-                    : "text-muted hover:text-accent after:w-0 hover:after:w-full"
-                }`}
-              >
-                {link.label}
-              </a>
-            </li>
-          ))}
+          {links.map((link) => {
+            const href = isHome ? link.href : `/${link.href}`;
+            const isActive = isHome && activeLink === link.href;
+            return (
+              <li key={link.href}>
+                <a
+                  href={href}
+                  aria-current={isActive ? "page" : undefined}
+                  className={`relative font-sans text-sm py-1 transition-colors duration-200 after:absolute after:left-0 after:-bottom-0.5 after:h-px after:bg-accent after:transition-all after:duration-300 ${
+                    isActive
+                      ? "text-accent after:w-full"
+                      : "text-muted hover:text-accent after:w-0 hover:after:w-full"
+                  }`}
+                >
+                  {link.label}
+                </a>
+              </li>
+            );
+          })}
         </ul>
 
         <div className="hidden md:block">
@@ -131,20 +138,22 @@ export default function Navbar() {
             : "opacity-0 pointer-events-none -translate-y-2 max-h-0 overflow-hidden py-0"
         }`}
       >
-        {links.map((link) => (
-          <a
-            key={link.href}
-            href={link.href}
-            onClick={() => setOpen(false)}
-            className={`font-sans text-sm py-2.5 transition-colors duration-200 ${
-              activeLink === link.href
-                ? "text-accent"
-                : "text-muted hover:text-accent"
-            }`}
-          >
-            {link.label}
-          </a>
-        ))}
+        {links.map((link) => {
+          const href = isHome ? link.href : `/${link.href}`;
+          const isActive = isHome && activeLink === link.href;
+          return (
+            <a
+              key={link.href}
+              href={href}
+              onClick={() => setOpen(false)}
+              className={`font-sans text-sm py-2.5 transition-colors duration-200 ${
+                isActive ? "text-accent" : "text-muted hover:text-accent"
+              }`}
+            >
+              {link.label}
+            </a>
+          );
+        })}
         <Button
           as="a"
           href="/obrigado"

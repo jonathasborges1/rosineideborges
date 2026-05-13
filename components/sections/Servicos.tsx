@@ -40,7 +40,11 @@ export default function Servicos() {
                   : ""
               }
             >
-              <Card className="group flex flex-col gap-4 h-full">
+              <Card
+                as={servico.href ? "a" : "div"}
+                href={servico.href}
+                className="group flex flex-col gap-4 h-full"
+              >
                 <div className="w-10 h-10 rounded-lg bg-accent/10 group-hover:bg-accent/20 flex items-center justify-center transition-colors duration-300">
                   <servico.icon size={20} className="text-accent" />
                 </div>
@@ -50,6 +54,11 @@ export default function Servicos() {
                 <p className="font-sans text-sm text-muted leading-relaxed">
                   {servico.desc}
                 </p>
+                {servico.href && (
+                  <span className="mt-auto font-sans text-xs font-semibold text-accent tracking-wide">
+                    Saiba mais →
+                  </span>
+                )}
               </Card>
             </Reveal>
           ))}

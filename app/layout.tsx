@@ -33,9 +33,6 @@ export const metadata: Metadata = {
     "psicóloga em manaus, terapia em manaus, psicoterapia online, psicóloga praça 14, saúde mental manaus, gerontologia manaus, psico-oncologia manaus, psicóloga online brasil, ansiedade depressão manaus",
   authors: [{ name: "Rosineide B. Cavalcante" }],
   creator: "Rosineide B. Cavalcante",
-  alternates: {
-    canonical: siteUrl,
-  },
   openGraph: {
     title: "Psicóloga em Manaus | Rosineide B. Cavalcante",
     description:

@@ -86,7 +86,7 @@ export default function Navbar() {
           </span>
         </a>
 
-        <ul className="hidden md:flex items-center gap-8" role="list">
+        <ul className="hidden md:flex items-center gap-5" role="list">
           {links.map((link) => {
             const href = isHome ? link.href : `/${link.href}`;
             const isActive = isHome && activeLink === link.href;
@@ -106,6 +106,32 @@ export default function Navbar() {
               </li>
             );
           })}
+          <li>
+            <a
+              href="/terapia-online-manaus"
+              aria-current={pathname === "/terapia-online-manaus" ? "page" : undefined}
+              className={`relative font-sans text-sm py-1 transition-colors duration-200 after:absolute after:left-0 after:-bottom-0.5 after:h-px after:bg-accent after:transition-all after:duration-300 ${
+                pathname === "/terapia-online-manaus"
+                  ? "text-accent after:w-full"
+                  : "text-muted hover:text-accent after:w-0 hover:after:w-full"
+              }`}
+            >
+              Terapia Online
+            </a>
+          </li>
+          <li>
+            <a
+              href="/psicoterapia-para-idosos-manaus"
+              aria-current={pathname === "/psicoterapia-para-idosos-manaus" ? "page" : undefined}
+              className={`relative font-sans text-sm py-1 transition-colors duration-200 after:absolute after:left-0 after:-bottom-0.5 after:h-px after:bg-accent after:transition-all after:duration-300 ${
+                pathname === "/psicoterapia-para-idosos-manaus"
+                  ? "text-accent after:w-full"
+                  : "text-muted hover:text-accent after:w-0 hover:after:w-full"
+              }`}
+            >
+              Para Idosos
+            </a>
+          </li>
         </ul>
 
         <div className="hidden md:block">
@@ -154,6 +180,24 @@ export default function Navbar() {
             </a>
           );
         })}
+        <a
+          href="/terapia-online-manaus"
+          onClick={() => setOpen(false)}
+          className={`font-sans text-sm py-2.5 transition-colors duration-200 ${
+            pathname === "/terapia-online-manaus" ? "text-accent" : "text-muted hover:text-accent"
+          }`}
+        >
+          Terapia Online
+        </a>
+        <a
+          href="/psicoterapia-para-idosos-manaus"
+          onClick={() => setOpen(false)}
+          className={`font-sans text-sm py-2.5 transition-colors duration-200 ${
+            pathname === "/psicoterapia-para-idosos-manaus" ? "text-accent" : "text-muted hover:text-accent"
+          }`}
+        >
+          Para Idosos
+        </a>
         <Button
           as="a"
           href="/obrigado"

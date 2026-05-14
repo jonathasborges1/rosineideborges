@@ -64,6 +64,13 @@ const jsonLd = {
       },
     },
     {
+      "@type": "BreadcrumbList",
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
+        { "@type": "ListItem", position: 2, name: "Terapia Online em Manaus", item: pageUrl },
+      ],
+    },
+    {
       "@type": "FAQPage",
       mainEntity: [
         {

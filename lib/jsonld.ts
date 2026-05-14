@@ -1,4 +1,5 @@
 import { siteUrl } from "@/lib/constants";
+import { faqs } from "@/lib/data/faqs";
 
 export const jsonLd = {
   "@context": "https://schema.org",
@@ -82,6 +83,17 @@ export const jsonLd = {
       name: "Rosineide B. Cavalcante — Psicóloga",
       inLanguage: "pt-BR",
       publisher: { "@id": `${siteUrl}/#pessoa` },
+    },
+    {
+      "@type": "FAQPage",
+      mainEntity: faqs.map((faq) => ({
+        "@type": "Question",
+        name: faq.pergunta,
+        acceptedAnswer: {
+          "@type": "Answer",
+          text: faq.resposta,
+        },
+      })),
     },
   ],
 };

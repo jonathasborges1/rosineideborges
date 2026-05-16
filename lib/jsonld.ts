@@ -25,7 +25,7 @@ export const jsonLd = {
       },
     },
     {
-      "@type": ["LocalBusiness", "MedicalBusiness", "ProfessionalService"],
+      "@type": ["MedicalBusiness", "ProfessionalService"],
       "@id": `${siteUrl}/#negocio`,
       name: "Rosineide B. Cavalcante — Psicóloga",
       description:
@@ -36,11 +36,10 @@ export const jsonLd = {
       priceRange: "$$",
       address: {
         "@type": "PostalAddress",
-        streetAddress: "Av. Álvaro Maia, nº 1444",
+        streetAddress: "Av. Álvaro Maia, nº 1444, Praça 14 de Janeiro",
         addressLocality: "Manaus",
         addressRegion: "AM",
         addressCountry: "BR",
-        addressNeighborhood: "Praça 14 de Janeiro",
       },
       geo: {
         "@type": "GeoCoordinates",
@@ -57,7 +56,8 @@ export const jsonLd = {
         {
           "@type": "OpeningHoursSpecification",
           dayOfWeek: "Saturday",
-          description: "Com agendamento prévio",
+          opens: "08:00",
+          closes: "12:00",
         },
       ],
       hasOfferCatalog: {

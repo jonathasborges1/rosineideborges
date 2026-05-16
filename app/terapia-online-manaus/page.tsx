@@ -11,7 +11,7 @@ import { siteUrl, WA_AGENDAR } from "@/lib/constants";
 const pageUrl = `${siteUrl}/terapia-online-manaus`;
 
 export const metadata: Metadata = {
-  title: "Terapia Online em Manaus | Psicóloga Rosineide Borges | Agende pelo WhatsApp",
+  title: { absolute: "Terapia Online em Manaus | Psicóloga Rosineide Borges" },
   description:
     "Psicoterapia online com psicóloga registrada (CRP20/02777) em Manaus. Sigilosa, flexível e pelo celular ou PC. Agende pelo WhatsApp.",
   keywords:
@@ -391,7 +391,13 @@ export default function TerapiaOnlineManaus() {
                 href="/psicoterapia-para-idosos-manaus"
                 className="font-sans text-sm text-sand/70 hover:text-sand transition-colors underline-offset-2 hover:underline"
               >
-                Conheça também o atendimento especializado para idosos (Gerontologia) →
+                Atendimento especializado para idosos — Gerontologia →
+              </a>
+              <a
+                href="/psico-oncologia-manaus"
+                className="font-sans text-sm text-sand/70 hover:text-sand transition-colors underline-offset-2 hover:underline"
+              >
+                Suporte psicológico oncológico — Psico-oncologia →
               </a>
             </Reveal>
           </div>
@@ -416,7 +422,7 @@ export default function TerapiaOnlineManaus() {
             </Reveal>
             <dl className="flex flex-col">
               {faqItems.map((item, i) => (
-                <FaqItem key={i} pergunta={item.pergunta} resposta={item.resposta} />
+                <FaqItem key={i} pergunta={item.pergunta} resposta={item.resposta} defaultOpen={i === 0} />
               ))}
             </dl>
           </div>
@@ -464,9 +470,9 @@ function Stat({ value, label }: { value: string; label: string }) {
   );
 }
 
-function FaqItem({ pergunta, resposta }: { pergunta: string; resposta: string }) {
+function FaqItem({ pergunta, resposta, defaultOpen = false }: { pergunta: string; resposta: string; defaultOpen?: boolean }) {
   return (
-    <details className="group border-b border-sand/60">
+    <details className="group border-b border-sand/60" open={defaultOpen}>
       <summary className="flex cursor-pointer items-center justify-between gap-4 py-4 md:py-5 min-h-[54px] list-none">
         <span className="font-sans text-sm font-semibold text-ink group-open:text-accent transition-colors duration-200">
           {pergunta}

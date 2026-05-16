@@ -31,6 +31,7 @@ export const metadata: Metadata = {
     "Psicóloga em Manaus (CRP20/02777), especialista em Gerontologia e Psico-oncologia. Presencial na Praça 14 e online para todo o Brasil.",
   keywords:
     "psicóloga em manaus, terapia em manaus, psicoterapia online, psicóloga praça 14, saúde mental manaus, gerontologia manaus, psico-oncologia manaus, psicóloga online brasil, ansiedade depressão manaus",
+  alternates: { canonical: siteUrl },
   authors: [{ name: "Rosineide B. Cavalcante" }],
   creator: "Rosineide B. Cavalcante",
   openGraph: {

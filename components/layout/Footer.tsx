@@ -66,7 +66,14 @@ export default function Footer() {
                 Atenção ao Idoso (Gerontologia)
               </a>
             </li>
-            <li>Suporte Oncológico</li>
+            <li>
+              <a
+                href="/psico-oncologia-manaus"
+                className="hover:text-accent transition-colors underline-offset-2 hover:underline"
+              >
+                Suporte Oncológico (Psico-oncologia)
+              </a>
+            </li>
             <li>
               <a
                 href="/terapia-online-manaus"
@@ -85,6 +92,26 @@ export default function Footer() {
           © {new Date().getFullYear()} Rosineide B. Cavalcante · CRP20/02777
         </p>
         <p>Psicóloga em Manaus — Praça 14 de Janeiro</p>
+        <p>
+          Desenvolvido por{" "}
+          <a
+            href="https://lumasites.com.br"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cream/70 transition-colors"
+          >
+            LumaSites
+          </a>
+          {" · "}
+          <a
+            href="https://github.com/jonathasborges1/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="hover:text-cream/70 transition-colors"
+          >
+            Jonathas Borges
+          </a>
+        </p>
       </div>
     </footer>
   );

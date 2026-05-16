@@ -41,5 +41,6 @@ export const servicos: Servico[] = [
     icon: Ribbon,
     titulo: "Suporte Oncológico",
     desc: "Psico-oncologia para pacientes em tratamento e familiares, com acolhimento, força e qualidade de vida.",
+    href: "/psico-oncologia-manaus",
   },
 ];

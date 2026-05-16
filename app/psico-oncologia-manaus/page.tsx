@@ -1,36 +1,36 @@
 import type { Metadata } from "next";
-import { Heart, ShieldCheck, Users, Clock, ChevronDown, Globe } from "lucide-react";
+import { Heart, ShieldCheck, Users, Globe, ChevronDown } from "lucide-react";
 import Navbar from "@/components/layout/Navbar";
 import Footer from "@/components/layout/Footer";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import WaveDivider from "@/components/ui/WaveDivider";
 import Button from "@/components/ui/Button";
 import Reveal from "@/components/ui/Reveal";
-import { siteUrl } from "@/lib/constants";
+import { siteUrl, WA_AGENDAR } from "@/lib/constants";
 
-const pageUrl = `${siteUrl}/psicoterapia-para-idosos-manaus`;
+const pageUrl = `${siteUrl}/psico-oncologia-manaus`;
 
 export const metadata: Metadata = {
-  title: { absolute: "Psicóloga para Idosos em Manaus | Gerontologia" },
+  title: { absolute: "Psico-oncologia em Manaus | Suporte Emocional Oncológico" },
   description:
-    "Psicóloga especialista em Gerontologia (CRP20/02777) para idosos em Manaus. Presencial na Praça 14 e online. Agende pelo WhatsApp.",
+    "Psicóloga pós-graduada em Psico-oncologia (CRP20/02777) para pacientes e familiares em tratamento do câncer em Manaus. Presencial na Praça 14 e online. Agende pelo WhatsApp.",
   keywords:
-    "psicóloga para idosos em manaus, gerontologia manaus, psicoterapia para idosos manaus, psicólogo para terceira idade manaus, acompanhamento psicológico idoso manaus, saúde mental idoso manaus",
+    "psico-oncologia manaus, psicóloga oncológica manaus, apoio psicológico cancer manaus, suporte emocional oncologia manaus, psicólogo para paciente com câncer manaus, apoio emocional tratamento oncológico manaus, psicoterapia oncologia manaus",
   alternates: { canonical: pageUrl },
   openGraph: {
-    title: "Psicóloga para Idosos em Manaus | Gerontologia | Rosineide B. Cavalcante",
+    title: "Psico-oncologia em Manaus | Suporte Emocional Oncológico",
     description:
-      "Atendimento psicológico especializado para a terceira idade. Pós-graduada em Gerontologia, presencial em Manaus e online.",
+      "Acompanhamento psicológico para pacientes em tratamento oncológico e seus familiares. Pós-graduada em Psico-oncologia, presencial em Manaus e online.",
     url: pageUrl,
     type: "website",
     locale: "pt_BR",
     siteName: "Rosineide B. Cavalcante — Psicóloga",
-    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Psicóloga para Idosos em Manaus — Gerontologia" }],
+    images: [{ url: "/og-image.jpg", width: 1200, height: 630, alt: "Psico-oncologia em Manaus — Rosineide B. Cavalcante" }],
   },
   twitter: {
     card: "summary_large_image",
-    title: "Psicóloga para Idosos em Manaus | Gerontologia",
-    description: "Atendimento psicológico especializado para a terceira idade em Manaus. Pós-graduada em Gerontologia.",
+    title: "Psico-oncologia em Manaus | Suporte Emocional Oncológico",
+    description: "Acompanhamento psicológico para pacientes em tratamento oncológico e familiares. Presencial em Manaus e online.",
     images: ["/og-image.jpg"],
   },
   robots: { index: true, follow: true, googleBot: { index: true, follow: true, "max-snippet": -1 } },
@@ -42,9 +42,9 @@ const jsonLd = {
     {
       "@type": "Service",
       "@id": `${pageUrl}/#servico`,
-      name: "Psicoterapia para Idosos em Manaus — Gerontologia",
+      name: "Psico-oncologia em Manaus",
       description:
-        "Atendimento psicológico especializado para a terceira idade com a psicóloga Rosineide B. Cavalcante (CRP20/02777), pós-graduada em Gerontologia. Presencial em Manaus e online para todo o Brasil.",
+        "Acompanhamento psicológico especializado para pacientes em tratamento oncológico e seus familiares, conduzido pela psicóloga Rosineide B. Cavalcante (CRP20/02777), pós-graduada em Psico-oncologia. Presencial em Manaus e online para todo o Brasil.",
       url: pageUrl,
       provider: {
         "@type": "Person",
@@ -62,7 +62,7 @@ const jsonLd = {
       "@type": "BreadcrumbList",
       itemListElement: [
         { "@type": "ListItem", position: 1, name: "Início", item: siteUrl },
-        { "@type": "ListItem", position: 2, name: "Psicóloga para Idosos em Manaus", item: pageUrl },
+        { "@type": "ListItem", position: 2, name: "Psico-oncologia em Manaus", item: pageUrl },
       ],
     },
     {
@@ -70,42 +70,42 @@ const jsonLd = {
       mainEntity: [
         {
           "@type": "Question",
-          name: "Por que idosos precisam de acompanhamento psicológico?",
+          name: "O que é Psico-oncologia?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "O envelhecimento traz mudanças físicas, emocionais e sociais significativas — aposentadoria, perdas de entes queridos, limitações físicas e isolamento. A Gerontologia Psicológica atua justamente nesse cuidado, promovendo qualidade de vida, autonomia e bem-estar emocional na terceira idade.",
+            text: "Psico-oncologia é a especialidade da Psicologia que atua junto a pacientes com câncer e seus familiares. O acompanhamento psicológico ajuda a lidar com o impacto emocional do diagnóstico, os desafios do tratamento, o medo da recorrência e a reintegração à vida após o término da terapêutica médica.",
           },
         },
         {
           "@type": "Question",
-          name: "O que é Gerontologia e por que ela é importante?",
+          name: "Quem pode se beneficiar do acompanhamento em Psico-oncologia?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Gerontologia é a ciência que estuda o envelhecimento em seus aspectos biológicos, psicológicos e sociais. Um psicólogo com pós-graduação em Gerontologia tem formação especializada para lidar com as particularidades emocionais e cognitivas da terceira idade — algo que um psicólogo clínico generalista não necessariamente possui.",
+            text: "Pacientes em qualquer fase do tratamento oncológico — do diagnóstico à remissão — e seus familiares e cuidadores diretos. O suporte se estende a quem perdeu um ente querido para o câncer e precisa atravessar o luto.",
           },
         },
         {
           "@type": "Question",
-          name: "A família pode participar do processo terapêutico?",
+          name: "O acompanhamento psicológico interfere no tratamento médico?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sim. Em muitos casos a participação dos familiares fortalece o processo e ajuda na adaptação do ambiente doméstico. A psicóloga pode orientar os cuidadores sobre como lidar com situações específicas do envelhecimento.",
+            text: "Não interfere — complementa. Estudos mostram que pacientes com suporte psicológico apresentam melhor adesão ao tratamento, menor nível de ansiedade e melhor qualidade de vida. A psicóloga atua em conjunto, respeitando integralmente o protocolo da equipe médica.",
           },
         },
         {
           "@type": "Question",
-          name: "O atendimento pode ser feito online para idosos?",
+          name: "A família também pode participar das sessões?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "Sim. Para idosos com dificuldade de locomoção ou que residem em outras cidades, o atendimento online por videochamada é uma alternativa segura e eficaz. Auxiliamos na orientação técnica para que o idoso consiga participar das sessões com conforto.",
+            text: "Sim. Em muitos casos, sessões com familiares ou cuidadores fortalecem a rede de apoio ao paciente. A psicóloga pode orientar como comunicar-se, como lidar com o medo e como cuidar da própria saúde emocional sem negligenciar quem precisa de cuidado.",
           },
         },
         {
           "@type": "Question",
-          name: "Como agendar uma consulta para meu familiar idoso?",
+          name: "Como agendar uma consulta de Psico-oncologia?",
           acceptedAnswer: {
             "@type": "Answer",
-            text: "O agendamento é feito pelo WhatsApp. Clique no botão desta página, envie uma mensagem e combinamos o melhor horário — presencial em Manaus ou online.",
+            text: "O agendamento é feito diretamente pelo WhatsApp. Clique no botão desta página, envie uma mensagem e combinamos o melhor horário — presencial no consultório em Manaus ou online para qualquer cidade do Brasil.",
           },
         },
       ],
@@ -120,84 +120,84 @@ const espresso = "#5C3D2E";
 const beneficios = [
   {
     icon: Heart,
-    titulo: "Especialista em envelhecimento",
-    desc: "Pós-graduada em Gerontologia — formação específica para as demandas emocionais, cognitivas e sociais da terceira idade.",
+    titulo: "Acolhimento sem julgamentos",
+    desc: "Espaço seguro para expressar medo, raiva, tristeza e incerteza — emoções naturais diante do diagnóstico e do tratamento.",
   },
   {
     icon: Users,
-    titulo: "Suporte à família",
-    desc: "Orientação para cuidadores e familiares sobre como apoiar o idoso no dia a dia sem sobrecarga emocional.",
+    titulo: "Suporte à família e cuidadores",
+    desc: "Orientação para familiares sobre como apoiar o paciente e cuidar da própria saúde emocional ao mesmo tempo.",
   },
   {
     icon: Globe,
     titulo: "Presencial ou online",
-    desc: "Consultório na Praça 14 de Janeiro, Manaus. Para idosos com dificuldade de locomoção, o atendimento online é uma alternativa segura.",
+    desc: "Consultório na Praça 14 de Janeiro, Manaus. Para pacientes com mobilidade reduzida, o atendimento online é igualmente eficaz.",
   },
   {
     icon: ShieldCheck,
-    titulo: "Sigilo e ética",
-    desc: "Confidencialidade garantida pelo Código de Ética do CFP. Ambiente acolhedor, sem julgamentos.",
+    titulo: "Especialização pós-graduada",
+    desc: "Formação específica em Psico-oncologia — não apenas psicologia clínica geral. Conhecimento das particularidades emocionais do adoecimento oncológico.",
   },
 ];
 
 const temas = [
-  "Depressão e ansiedade na terceira idade",
-  "Luto e perdas recorrentes",
-  "Adaptação à aposentadoria",
-  "Isolamento social e solidão",
-  "Conflitos familiares e de cuidado",
-  "Enfrentamento de doenças crônicas",
-  "Perda de autonomia e autoestima",
-  "Suporte ao cuidador",
+  "Impacto emocional do diagnóstico",
+  "Ansiedade durante o tratamento",
+  "Medo da recorrência",
+  "Depressão e perda de sentido",
+  "Luto antecipatório e real",
+  "Adaptação à nova imagem corporal",
+  "Suporte ao cuidador familiar",
+  "Reintegração após o tratamento",
 ];
 
 const passos = [
   {
     numero: "01",
     titulo: "Entre em contato pelo WhatsApp",
-    desc: "Familiar ou o próprio idoso pode entrar em contato. Combinamos o formato mais adequado: presencial ou online.",
+    desc: "Paciente, familiar ou cuidador pode entrar em contato. Combinamos o formato mais adequado: presencial em Manaus ou online.",
   },
   {
     numero: "02",
-    titulo: "Primeira sessão de avaliação",
-    desc: "Sessão dedicada a entender a história, as demandas e os objetivos terapêuticos de forma individualizada.",
+    titulo: "Primeira sessão de acolhimento",
+    desc: "Sessão dedicada a compreender a história, o momento do tratamento e as necessidades emocionais de forma individualizada e sem pressa.",
   },
   {
     numero: "03",
     titulo: "Acompanhamento contínuo",
-    desc: "Processo terapêutico com frequência e duração adaptadas às necessidades do idoso e da família.",
+    desc: "Processo terapêutico com frequência adaptada à rotina de tratamento — incluindo períodos de internação ou limitação de mobilidade.",
   },
 ];
 
 const faqItems = [
   {
-    pergunta: "Por que idosos precisam de acompanhamento psicológico?",
+    pergunta: "O que é Psico-oncologia?",
     resposta:
-      "O envelhecimento traz mudanças físicas, emocionais e sociais significativas — aposentadoria, perdas, limitações físicas e isolamento. A Gerontologia Psicológica atua justamente nesse cuidado, promovendo qualidade de vida, autonomia e bem-estar emocional na terceira idade.",
+      "Psico-oncologia é a especialidade da Psicologia que atua junto a pacientes com câncer e seus familiares. O acompanhamento ajuda a lidar com o impacto emocional do diagnóstico, os desafios do tratamento, o medo da recorrência e a reintegração à vida após o término da terapêutica médica.",
   },
   {
-    pergunta: "O que é Gerontologia e por que ela é importante?",
+    pergunta: "Quem pode se beneficiar do acompanhamento?",
     resposta:
-      "Gerontologia é a ciência que estuda o envelhecimento em seus aspectos biológicos, psicológicos e sociais. Um psicólogo com pós-graduação em Gerontologia tem formação especializada para lidar com as particularidades da terceira idade — algo que um clínico generalista não necessariamente possui.",
+      "Pacientes em qualquer fase do tratamento oncológico — do diagnóstico à remissão — e seus familiares e cuidadores. O suporte também se estende a quem perdeu um ente querido para o câncer e precisa atravessar o luto.",
   },
   {
-    pergunta: "A família pode participar do processo terapêutico?",
+    pergunta: "O acompanhamento psicológico interfere no tratamento médico?",
     resposta:
-      "Sim. Em muitos casos a participação dos familiares fortalece o processo e ajuda na adaptação do ambiente doméstico. A psicóloga pode orientar os cuidadores sobre como lidar com situações específicas do envelhecimento.",
+      "Não — complementa. Estudos mostram que pacientes com suporte psicológico apresentam melhor adesão ao tratamento, menor nível de ansiedade e melhor qualidade de vida. A psicóloga atua respeitando integralmente o protocolo da equipe médica.",
   },
   {
-    pergunta: "O atendimento pode ser online para idosos?",
+    pergunta: "A família também pode participar?",
     resposta:
-      "Sim. Para idosos com dificuldade de locomoção ou que residem em outras cidades, o atendimento online é uma alternativa segura. Auxiliamos na orientação para que o idoso consiga participar das sessões com conforto.",
+      "Sim. Em muitos casos, sessões com familiares ou cuidadores fortalecem a rede de apoio ao paciente. A psicóloga pode orientar como comunicar-se, lidar com o medo e cuidar da própria saúde emocional sem negligenciar quem precisa de cuidado.",
   },
   {
-    pergunta: "Como agendar uma consulta para meu familiar idoso?",
+    pergunta: "Como agendar uma consulta?",
     resposta:
-      "O agendamento é feito pelo WhatsApp. Clique no botão desta página, envie uma mensagem e combinamos o melhor horário — presencial em Manaus ou online.",
+      "O agendamento é feito pelo WhatsApp. Clique no botão desta página, envie uma mensagem e combinamos o melhor horário — presencial em Manaus ou online para qualquer cidade do Brasil.",
   },
 ];
 
-export default function PsicoterapiaParaIdososManaus() {
+export default function PsicoOncologiaManaus() {
   return (
     <>
       <script
@@ -215,28 +215,28 @@ export default function PsicoterapiaParaIdososManaus() {
           <div className="max-w-3xl mx-auto w-full py-14 md:py-24 flex flex-col gap-5 md:gap-7">
             <Reveal delay={0}>
               <span className="inline-flex w-fit items-center rounded-pill border border-sand bg-white/70 px-3 py-1.5 font-sans text-[0.68rem] sm:text-xs font-semibold tracking-widest uppercase text-accent shadow-sm">
-                Gerontologia · Manaus e Brasil
+                Psico-oncologia · Manaus e Brasil
               </span>
             </Reveal>
 
             <Reveal delay={60}>
               <h1 className="font-serif text-[2.18rem] sm:text-[2.75rem] md:text-5xl lg:text-[3.25rem] font-semibold text-ink leading-[1.04]">
-                Psicóloga para idosos em Manaus com{" "}
-                <em className="not-italic text-gradient-accent">especialização em Gerontologia</em>
+                Suporte psicológico para{" "}
+                <em className="not-italic text-gradient-accent">pacientes oncológicos em Manaus</em>
               </h1>
             </Reveal>
 
             <Reveal delay={120}>
               <p className="font-sans text-sm sm:text-base lg:text-lg text-muted leading-relaxed max-w-xl">
-                Cuidado psicológico especializado para a terceira idade com a psicóloga Rosineide B.
-                Cavalcante (CRP20/02777), pós-graduada em Gerontologia. Presencial em Manaus e online
-                para todo o Brasil.
+                Acompanhamento psicológico especializado para pacientes em tratamento do câncer e seus
+                familiares. Conduzido pela psicóloga Rosineide B. Cavalcante (CRP20/02777), pós-graduada
+                em Psico-oncologia — presencial em Manaus e online para todo o Brasil.
               </p>
             </Reveal>
 
             <Reveal delay={180}>
               <div className="flex flex-wrap gap-2 text-xs font-sans text-muted">
-                {["CRP20/02777", "Pós-graduada em Gerontologia", "Presencial e online", "Suporte à família"].map((tag) => (
+                {["CRP20/02777", "Pós-graduada em Psico-oncologia", "Presencial e online", "Suporte à família"].map((tag) => (
                   <span
                     key={tag}
                     className="inline-flex items-center gap-1.5 rounded-pill border border-sand bg-white/70 px-3 py-1.5 shadow-sm"
@@ -261,7 +261,7 @@ export default function PsicoterapiaParaIdososManaus() {
             <Reveal delay={300}>
               <div className="grid grid-cols-3 gap-3 rounded-lg border border-sand/80 bg-white/55 p-3 md:p-4 max-w-sm">
                 <Stat value="10+" label="Anos de experiência" />
-                <Stat value="Pós-grad." label="Gerontologia" />
+                <Stat value="Pós-grad." label="Psico-oncologia" />
                 <Stat value="Manaus" label="Presencial" />
               </div>
             </Reveal>
@@ -291,10 +291,10 @@ export default function PsicoterapiaParaIdososManaus() {
                 <span className="h-px w-6 bg-accent/40 rounded-full" aria-hidden="true" />
               </div>
               <h2 className="font-serif text-[1.75rem] sm:text-3xl md:text-[2.35rem] font-semibold text-ink mb-3 leading-snug">
-                Por que escolher uma especialista em Gerontologia
+                Por que buscar um especialista em Psico-oncologia
               </h2>
               <p className="font-sans text-muted leading-relaxed">
-                Não é só psicologia clínica geral. É um olhar treinado especificamente para o envelhecimento.
+                O adoecimento oncológico exige um olhar treinado. Não é psicologia clínica geral — é uma especialidade com método próprio.
               </p>
             </Reveal>
 
@@ -328,10 +328,10 @@ export default function PsicoterapiaParaIdososManaus() {
                 <span className="h-px w-6 bg-accent/40 rounded-full" aria-hidden="true" />
               </div>
               <h2 className="font-serif text-[1.75rem] sm:text-3xl md:text-[2.35rem] font-semibold text-ink mb-3 leading-snug">
-                Situações que tratamos juntos
+                O que trabalhamos juntos
               </h2>
               <p className="font-sans text-muted leading-relaxed">
-                Cada fase do envelhecimento traz desafios únicos. Estamos preparados para todos eles.
+                O câncer afeta muito além do corpo. O acompanhamento psicológico age em cada dimensão desse impacto.
               </p>
             </Reveal>
 
@@ -407,26 +407,31 @@ export default function PsicoterapiaParaIdososManaus() {
               </h2>
               <p className="font-sans text-muted leading-relaxed max-w-xl mx-auto">
                 Psicóloga registrada no CRP20/02777, com mais de 10 anos de atuação clínica em Manaus e
-                pós-graduação em Gerontologia. Atende idosos e famílias com escuta ativa, ética e cuidado
-                individualizado — presencialmente na Praça 14 de Janeiro e online para todo o Brasil.
+                pós-graduação em Psico-oncologia. Atende pacientes em tratamento oncológico e seus familiares
+                com escuta ativa, ética e sigilo — presencialmente na Praça 14 de Janeiro e online para todo
+                o Brasil.
               </p>
             </Reveal>
 
             <Reveal delay={120} variant="fade-up">
               <div className="rounded-xl border border-sand/60 bg-cream/50 p-5 md:p-6">
                 <p className="font-sans text-xs font-semibold tracking-widest uppercase text-accent mb-3">
-                  Também atendemos online
+                  Também atendemos
                 </p>
-                <p className="font-sans text-sm text-muted leading-relaxed mb-4">
-                  Idosos com dificuldade de deslocamento ou famílias em outras cidades podem optar pelo
-                  atendimento por videochamada. Mesmo qualidade, no conforto de casa.
-                </p>
-                <a
-                  href="/terapia-online-manaus"
-                  className="font-sans text-sm font-semibold text-accent hover:text-espresso transition-colors"
-                >
-                  Saiba mais sobre a terapia online →
-                </a>
+                <div className="flex flex-col gap-3">
+                  <a
+                    href="/psicoterapia-para-idosos-manaus"
+                    className="font-sans text-sm font-semibold text-accent hover:text-espresso transition-colors"
+                  >
+                    Psicóloga para idosos — Gerontologia →
+                  </a>
+                  <a
+                    href="/terapia-online-manaus"
+                    className="font-sans text-sm font-semibold text-accent hover:text-espresso transition-colors"
+                  >
+                    Terapia online para todo o Brasil →
+                  </a>
+                </div>
               </div>
             </Reveal>
           </div>
@@ -446,7 +451,7 @@ export default function PsicoterapiaParaIdososManaus() {
                 <span className="h-px w-6 bg-accent/40 rounded-full" aria-hidden="true" />
               </div>
               <h2 className="font-serif text-[1.75rem] sm:text-3xl md:text-[2.35rem] font-semibold text-ink mb-3 leading-snug">
-                Perguntas sobre psicologia para idosos
+                Perguntas sobre Psico-oncologia
               </h2>
             </Reveal>
             <dl className="flex flex-col">
@@ -465,20 +470,20 @@ export default function PsicoterapiaParaIdososManaus() {
           <div className="absolute -bottom-16 right-[-3rem] h-56 w-56 rounded-full bg-sand/10 blur-3xl pointer-events-none" />
           <Reveal className="max-w-3xl mx-auto text-center flex flex-col items-center gap-5 md:gap-7" delay={40}>
             <span className="font-sans text-xs font-semibold tracking-widest uppercase text-sand">
-              Cuide de quem você ama
+              Não precisa enfrentar isso sozinho
             </span>
             <h2 className="font-serif text-[1.75rem] sm:text-3xl md:text-4xl lg:text-5xl font-semibold text-cream leading-tight">
-              Seu familiar merece cuidado especializado. Agora.
+              O cuidado emocional faz parte do tratamento.
             </h2>
             <p className="font-sans text-cream/70 text-sm sm:text-base leading-relaxed max-w-lg">
-              O primeiro passo é o mais importante. Entre em contato pelo WhatsApp e veja como podemos
-              ajudar — presencialmente em Manaus ou online para todo o Brasil.
+              Paciente, familiar ou cuidador — o primeiro passo é uma mensagem. Atendimento presencial
+              em Manaus e online para todo o Brasil.
             </p>
             <Button as="a" href="/obrigado" className="text-sm sm:text-base px-8 sm:px-10 py-4">
               Agendar pelo WhatsApp
             </Button>
             <p className="font-sans text-sm text-cream/40">
-              Psicóloga registrada — CRP20/02777 · Gerontologia · Manaus/AM
+              Psicóloga registrada — CRP20/02777 · Psico-oncologia · Manaus/AM
             </p>
           </Reveal>
         </section>

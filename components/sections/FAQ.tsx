@@ -6,7 +6,7 @@ import Reveal from "@/components/ui/Reveal";
 import { faqs } from "@/lib/data/faqs";
 
 export default function FAQ() {
-  const [open, setOpen] = useState<number | null>(null);
+  const [open, setOpen] = useState<number | null>(0);
 
   return (
     <section

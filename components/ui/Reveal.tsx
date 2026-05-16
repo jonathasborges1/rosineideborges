@@ -19,10 +19,13 @@ export default function Reveal({
 }: RevealProps) {
   const ref = useRef<HTMLDivElement | null>(null);
   const [isVisible, setIsVisible] = useState(false);
+  const [isMounted, setIsMounted] = useState(false);
 
   useEffect(() => {
     const node = ref.current;
     if (!node) return;
+
+    setIsMounted(true);
 
     const reducedMotion = window.matchMedia(
       "(prefers-reduced-motion: reduce)",
@@ -56,14 +59,16 @@ export default function Reveal({
     "fade-left": "translate-x-5",
   };
 
+  const isHidden = isMounted && !isVisible;
+
   return (
     <div
       ref={ref}
       style={{ transitionDelay: `${delay}ms` }}
       className={`transition-[opacity,transform] duration-700 ease-out motion-reduce:transition-none motion-reduce:transform-none ${
-        isVisible
-          ? "opacity-100 translate-x-0 translate-y-0"
-          : `opacity-0 ${variantClasses[variant]}`
+        isHidden
+          ? `opacity-0 ${variantClasses[variant]}`
+          : "opacity-100 translate-x-0 translate-y-0"
       } ${className}`}
     >
       {children}

@@ -53,7 +53,7 @@ export default function LoadingScreen() {
     const startedAt = performance.now();
     const isMobile = window.matchMedia("(max-width: 768px)").matches;
     const minVisibleMs = isMobile ? 500 : 320;
-    const hardCapMs = isMobile ? 1400 : 900;
+    const hardCapMs = isMobile ? 1000 : 700;
     const maxBeforeLoad = 95;
     let hideTimer: ReturnType<typeof setTimeout>;
     let removeTimer: ReturnType<typeof setTimeout>;

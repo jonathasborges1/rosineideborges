@@ -1,11 +1,10 @@
 import { MapPin, Phone, Instagram } from "lucide-react";
-import Reveal from "@/components/ui/Reveal";
 
 export default function Footer() {
   return (
     <footer className="bg-ink text-cream/80 py-12 px-6">
       <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8">
-        <Reveal delay={0}>
+        <div>
           <p className="font-serif text-xl text-cream font-semibold mb-1">
             Rosineide B. Cavalcante
           </p>
@@ -16,9 +15,9 @@ export default function Footer() {
             Especializada em Psicoterapia, Gerontologia e Psico-oncologia.
             Atendimento presencial em Manaus e online para todo o Brasil.
           </p>
-        </Reveal>
+        </div>
 
-        <Reveal delay={80}>
+        <div>
           <p className="font-serif text-base text-cream font-medium mb-4">
             Contato
           </p>
@@ -50,9 +49,9 @@ export default function Footer() {
               </a>
             </li>
           </ul>
-        </Reveal>
+        </div>
 
-        <Reveal delay={160}>
+        <div>
           <p className="font-serif text-base text-cream font-medium mb-4">
             Atendimento
           </p>
@@ -84,7 +83,7 @@ export default function Footer() {
             </li>
             <li>Atendimento Presencial — Manaus/AM</li>
           </ul>
-        </Reveal>
+        </div>
       </div>
 
       <div className="max-w-6xl mx-auto mt-10 pt-6 border-t border-white/10 flex flex-col md:flex-row items-center justify-between gap-2 font-sans text-xs text-cream/40">

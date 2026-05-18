@@ -132,6 +132,19 @@ export default function Navbar() {
               Para Idosos
             </a>
           </li>
+          <li>
+            <a
+              href="/psico-oncologia-manaus"
+              aria-current={pathname === "/psico-oncologia-manaus" ? "page" : undefined}
+              className={`relative font-sans text-sm py-1 transition-colors duration-200 after:absolute after:left-0 after:-bottom-0.5 after:h-px after:bg-accent after:transition-all after:duration-300 ${
+                pathname === "/psico-oncologia-manaus"
+                  ? "text-accent after:w-full"
+                  : "text-muted hover:text-accent after:w-0 hover:after:w-full"
+              }`}
+            >
+              Psico-oncologia
+            </a>
+          </li>
         </ul>
 
         <div className="hidden md:block">
@@ -197,6 +210,15 @@ export default function Navbar() {
           }`}
         >
           Para Idosos
+        </a>
+        <a
+          href="/psico-oncologia-manaus"
+          onClick={() => setOpen(false)}
+          className={`font-sans text-sm py-2.5 transition-colors duration-200 ${
+            pathname === "/psico-oncologia-manaus" ? "text-accent" : "text-muted hover:text-accent"
+          }`}
+        >
+          Psico-oncologia
         </a>
         <Button
           as="a"

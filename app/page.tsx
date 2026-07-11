@@ -7,6 +7,7 @@ import ComoFunciona from "@/components/sections/ComoFunciona";
 import Beneficios from "@/components/sections/Beneficios";
 import FAQ from "@/components/sections/FAQ";
 import Localizacao from "@/components/sections/Localizacao";
+import Agendamento from "@/components/sections/Agendamento";
 import CTAFinal from "@/components/sections/CTAFinal";
 import WhatsAppFloat from "@/components/WhatsAppFloat";
 import WaveDivider from "@/components/ui/WaveDivider";
@@ -40,7 +41,9 @@ export default function Home() {
         <FAQ />
         <WaveDivider from={cream} to={white} flip />
         <Localizacao />
-        <WaveDivider from={white} to={espresso} />
+        <WaveDivider from={white} to={cream} />
+        <Agendamento />
+        <WaveDivider from={cream} to={espresso} flip />
         <CTAFinal />
       </main>
       <Footer />
